@@ -16,13 +16,13 @@ public class Snake {
 
     public Snake() {        
         direction = UP;
-        parts.add(new SnakePart(2, 6));
+        parts.add(new SnakePart(5, 6));
         parts.add(new SnakePart(5, 7));
         parts.add(new SnakePart(5, 8));
     }
 
     public static Snake getInstance() {
-        if(instance==null) {
+        if(instance == null) {
             instance = new Snake();
         }
         return instance;
