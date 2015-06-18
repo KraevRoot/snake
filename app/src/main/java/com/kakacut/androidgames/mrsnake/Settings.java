@@ -39,7 +39,7 @@ public class Settings {
                     files.writeFile("score1.mrsnake")));
             out.write(Boolean.toString(soundEnabled));
             for (int i = 0; i < 5; i++) {
-                out.write(Integer.toString(highscores[i]));
+                out.write("\n" + Integer.toString(highscores[i]));
             }
 
         } catch (IOException e) {
