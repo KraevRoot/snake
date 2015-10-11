@@ -12,7 +12,7 @@ public class LoadingScreen extends Screen {
 
     public void update(float deltaTime) {
         Graphics g = game.getGraphics();
-        Assets.background = g.newPixmap("background.png", PixmapFormat.RGB565);
+        Assets.background = g.newPixmap("background_color.png", PixmapFormat.RGB565);
         Assets.logo = g.newPixmap("mylogo.png", PixmapFormat.ARGB4444);
         Assets.mainMenu = g.newPixmap("mymainmenu.png", PixmapFormat.ARGB4444);
         Assets.buttons = g.newPixmap("mybuttons.png", PixmapFormat.ARGB4444);
@@ -28,9 +28,12 @@ public class LoadingScreen extends Screen {
         Assets.headDown = g.newPixmap("myheaddown.png", PixmapFormat.ARGB4444);
         Assets.headRight = g.newPixmap("myheadright.png", PixmapFormat.ARGB4444);
         Assets.tail = g.newPixmap("mytail.png", PixmapFormat.ARGB4444);
-        Assets.stain1 = g.newPixmap("mystain1.png", PixmapFormat.ARGB4444);
-        Assets.stain2 = g.newPixmap("mystain2.png", PixmapFormat.ARGB4444);
-        Assets.stain3 = g.newPixmap("mystain3.png", PixmapFormat.ARGB4444);
+        Assets.stain1 = g.newPixmap("apple_color.png", PixmapFormat.ARGB4444);
+        Assets.stain2 = g.newPixmap("beer_color.png", PixmapFormat.ARGB4444);
+        Assets.stain3 = g.newPixmap("cherry_color.png", PixmapFormat.ARGB4444);
+        Assets.eraser1 = g.newPixmap("korga_color.png", PixmapFormat.ARGB4444);
+        Assets.eraser2 = g.newPixmap("bomb_color.png", PixmapFormat.ARGB4444);
+
         Assets.click = game.getAudio().newSound("click.ogg");
         Assets.eat = game.getAudio().newSound("eat.ogg");
         Assets.bitten = game.getAudio().newSound("bitten.ogg");

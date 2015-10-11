@@ -10,10 +10,6 @@ import com.kakacut.androidgames.framework.Input.TouchEvent;
 import com.kakacut.androidgames.framework.Pixmap;
 import com.kakacut.androidgames.framework.Screen;
 
-/*
-    в состоянии Ready, мы предлогаем игроку нажать на экран, чтобы начать игру
-    в состоянии Running, мы обновляем и рендерим игровой мир,
- */
 public class GameScreen extends Screen {
     enum GameState {
         Ready,
@@ -150,8 +146,18 @@ public class GameScreen extends Screen {
         Snake snake = world.snake;
         SnakePart head = snake.parts.get(0);
         Stain stain = world.stain;
-        
-        
+        Eraser eraser = world.eraser;
+
+        Pixmap eraserPixmap = null;
+        if(eraser.type == Eraser.TYPE_1)
+            eraserPixmap = Assets.eraser1;
+        if(eraser.type == Eraser.TYPE_2)
+            eraserPixmap = Assets.eraser2;
+
+        int a = eraser.x * 32;
+        int b = eraser.y * 32;
+        g.drawPixmap(eraserPixmap, a, b);
+
         Pixmap stainPixmap = null;
         if(stain.type == Stain.TYPE_1)
             stainPixmap = Assets.stain1;
